@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Dati da config/data.js: {{ $home }}</h1>
-    <p>This is my paragraph content.</p>
+    @foreach ($aziendeFerroviarie as $aziendaFerroviaria)
+        <h1>{{$aziendaFerroviaria->azienda}}</h1>
+        <p>This is my paragraph content.</p>
+    @endforeach
 @endsection
